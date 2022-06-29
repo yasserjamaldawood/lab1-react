@@ -1,26 +1,27 @@
-import logo from "./logo.svg";
 import "./App.css";
-import { useState } from "react";
-import Counter from "./counter";
-import Increment from "./incrementbtn";
-import Dncrement from "./decrementbtn";
+import CounterPage from "./pages/Counter";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ColorSchemesExample from "./component/Navbar";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Home from "./pages/Home";
+import Shop from "./pages/Shop";
+import { SingleProduct } from "./pages/SingleProduct";
 
 function App() {
-  const [counter, setCounter] = useState(0);
-  const increment = () => {
-    setCounter(counter + 1);
-  };
-  const decrement = () => {
-    setCounter(counter - 1);
-  };
   return (
-    <div className="App">
-      <Counter counter={counter} />
-      <Increment increment={increment} />
-      <Dncrement decrement={decrement} />
+    <div className="App ">
+      <BrowserRouter>
+        <ColorSchemesExample></ColorSchemesExample>
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/counter" element={<CounterPage />}></Route>
+          <Route path="/home" element={<Home />}></Route>
+          <Route path="/shop" element={<Shop />}></Route>
+          <Route path="/shop/:id" element={<SingleProduct />}></Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
 
 export default App;
-
