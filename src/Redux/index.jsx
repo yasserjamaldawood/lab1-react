@@ -1,53 +1,17 @@
-import { createStore } from 'redux'
+import {toDoSlice} from "./feature/todoSlice";
+//
+import { configureStore } from "@reduxjs/toolkit";
 
-const ADD_TODO = "ADD_TODO";
-const REMOVE_TODO = "REMOVE_TODO";
-// actions
-export const AddToDoAction = (payloud) => {
-    return {
-        type: ADD_TODO,
-        payloud
-    }
-}
 
-export const RemoveFromToDo = (payloud) => {
-    return {
-        type: REMOVE_TODO,
-        payloud
-    }
-}
-// intial state
-const ToDoIntialState = {
-    ToDos: [
-        {
-            title: "learn node js",
-            content: "Lorem ipsum dolor sit amet.",
-        },
-        {
-            title: "go to the sea",
-            content: "Lorem ipsum dolor sit amet.",
-        },
-        {
-            title: "walk the dog",
-            content: "Lorem ipsum dolor sit amet.",
-        },
-    ],
-}
-// reducer
-const ToDoReducer = (state = ToDoIntialState, action) => {
-    if (action.type === ADD_TODO) {
-        return { ...state, ToDos: [...state.ToDos, action.payloud] }
-    }
-    if (action.type === REMOVE_TODO) {
-        return { ...state, ToDos: [...state.ToDos.filter((elem,index) =>{return index!== action.payloud})] }
-    }
-    return state;
 
-}
+
 
 
 // store
-export const store = createStore(
+export const store = configureStore(
     // reducer name
-    ToDoReducer
+   {
+
+       reducer:{todo:toDoSlice.reducer}
+   } 
 );

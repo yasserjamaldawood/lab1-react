@@ -1,17 +1,17 @@
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { RemoveFromToDo } from "../../Redux";
+import { RemoveFromToDo } from "../../Redux/rebuxConfig";
+import {REMOVE_TODO} from "../../Redux/feature/todoSlice"
+import { useEffect } from "react";
+import { store } from "../../Redux";
 
 
 const TodoList = () => {
-    const ToDos = useSelector(state => state.ToDos);
-    console.log(ToDos);
+    const ToDos = useSelector(state => state.todo.ToDos);
+    console.log("from list todo",ToDos);
     const dispach= useDispatch();
-
-
-
     const removeToDo=(i)=>{
-        dispach(RemoveFromToDo(i))
+        dispach(REMOVE_TODO(i))
     }
    
     const todosList =

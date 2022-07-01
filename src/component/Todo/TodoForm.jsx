@@ -1,19 +1,17 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import {AddToDoAction} from "../../Redux"
+import {AddToDoAction} from "../../Redux/rebuxConfig"
+import {ADD_TODO} from "../../Redux/feature/todoSlice"
 
 
 const TodoForm = () => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
 
-
-
-//   
     const dispach= useDispatch();
     const addTodo = (task) => {
         console.log("task",task)
-        dispach(AddToDoAction(task))
+        dispach(ADD_TODO(task))
     };
 
   const handleSubmission = (e) => {
