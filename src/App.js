@@ -6,7 +6,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./pages/Home";
 import Shop from "./pages/Shop";
 import { SingleProduct } from "./pages/SingleProduct";
-import Todo from "./pages/Todo"
+import Todo from "./pages/Todo";
+import Register from "./pages/Register";
+
 
 function App() {
   return (
@@ -19,6 +21,7 @@ function App() {
           <Route path="/home" element={<Home />}></Route>
           <Route path="/toDo" element={<Todo/>}></Route>
           <Route path="/shop" element={<Shop />}></Route>
+          <Route path="/sign-up" element={<Register />}></Route>
           <Route path="/shop/:id" element={<SingleProduct />}></Route>
         </Routes>
       </BrowserRouter>

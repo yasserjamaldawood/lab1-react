@@ -22,6 +22,9 @@ function ColorSchemesExample() {
       <li className="nav-item">
         <Link to="/toDo" className="nav-link" >todo</Link>
       </li>
+      <li className="nav-item">
+        <Link to="/sign-up" className="nav-link" >sign-up</Link>
+      </li>
     </ul>
 
   );
