@@ -11,19 +11,19 @@ function ColorSchemesExample() {
         <a className="nav-link active" aria-current="page" href="#">portfolio</a>
       </li>
       <li className="nav-item">
-        <Link to="/counter" className="nav-link" >counter</Link>
-      </li>
-      <li className="nav-item">
-        <Link to="/home" className="nav-link" >home</Link>
+        <Link to="/home" className="nav-link" >Home</Link>
       </li>
       <li className="nav-item">
         <Link to="/shop" className="nav-link" >Shop</Link>
       </li>
       <li className="nav-item">
-        <Link to="/toDo" className="nav-link" >todo</Link>
+        <Link to="/toDo" className="nav-link" >Todo</Link>
       </li>
       <li className="nav-item">
-        <Link to="/sign-up" className="nav-link" >sign-up</Link>
+        <Link to="/sign-up" className="nav-link" >Sign-up</Link>
+      </li>
+      <li className="nav-item">
+        <Link to="/counter" className="nav-link" >Support-me</Link>
       </li>
     </ul>
 

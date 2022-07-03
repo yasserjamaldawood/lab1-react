@@ -1,6 +1,6 @@
 const Increment=({increment})=>{
 return(
-    <button onClick={increment}>+</button>
+    <button onClick={increment} className='btn btn-primary'>+</button>
 
 )
 }

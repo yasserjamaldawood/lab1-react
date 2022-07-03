@@ -17,11 +17,11 @@ function App() {
         <ColorSchemesExample></ColorSchemesExample>
         <Routes>
           <Route path="/" element={<Home />}></Route>
-          <Route path="/counter" element={<CounterPage />}></Route>
           <Route path="/home" element={<Home />}></Route>
           <Route path="/toDo" element={<Todo/>}></Route>
           <Route path="/shop" element={<Shop />}></Route>
           <Route path="/sign-up" element={<Register />}></Route>
+          <Route path="/counter" element={<CounterPage />}></Route>
           <Route path="/shop/:id" element={<SingleProduct />}></Route>
         </Routes>
       </BrowserRouter>

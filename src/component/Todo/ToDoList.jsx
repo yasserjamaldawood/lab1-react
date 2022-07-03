@@ -19,13 +19,17 @@ const TodoList = () => {
         ToDos.map((todo, i) => {
           return (
             <ul key={i}>
-              <li className="border d-flex">
-              <div className="text">
+
+              <li className="border d-flex align-items-center justify-content-center mx-5">
+              <div className="text p-2">
                 <p>Title : {todo.title}</p>
                 <p>Content : {todo.content}</p>
               </div>
+              <div>
+              <button onClick={()=>removeToDo(i)} className="btn btn-danger mx-5">x</button>
+              </div>
               </li>
-              <button onClick={()=>removeToDo(i)}>x</button>
+              
             </ul>
           );
         })

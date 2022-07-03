@@ -9,14 +9,24 @@ export const CounterPage = () => {
     setCounter(counter + 1);
   };
   const decrement = () => {
-    setCounter(counter - 1);
+    if (counter > 0) {
+
+      setCounter(counter - 1);
+    }
   };
   return (
-    <div>
+    <div className='container py-5 '>
+      <div className='border w-50 mx-auto p-5 d-flex flex-column justify-content-center align-items-center'>
+        <div>
+          <Counter counter={counter} />
+        </div>
+        <div>
+          <Dncrement decrement={decrement} />
+          <Increment increment={increment} />
+        </div>
+      </div>
 
-      <Counter counter={counter} />
-      <Increment increment={increment} />
-      <Dncrement decrement={decrement} />
+
     </div>
   )
 }

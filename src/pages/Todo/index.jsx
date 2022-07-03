@@ -6,9 +6,13 @@ import './Todo.css';
 function Todo() {
 
     return (
-        <div className="text-center py-2 todo-wrapper container">
+        <div className="text-center py-2 todo-wrapper container d-flex my-5 ">
+            <div className="w-50 my-5 border">
             <TodoForm />
-            <TodoList />
+            </div>
+            <div className="w-50 my-5 border">
+            <TodoList  />
+            </div>
         </div>
     );
 }
